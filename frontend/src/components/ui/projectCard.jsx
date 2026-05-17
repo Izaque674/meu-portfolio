@@ -1,10 +1,13 @@
-export default function ProjectCard({ projeto }) {
+export default function ProjectCard({ projeto, onClick }) {
   return (
-    <div className="
-      border border-[#2a2a2a] p-7
-      hover:border-[#8a7254] hover:-translate-y-1
-      transition-all duration-200 cursor-pointer group
-    ">
+    <div
+      onClick={onClick}
+      className="
+        border border-[#2a2a2a] p-7
+        hover:border-[#8a7254] hover:-translate-y-1
+        transition-all duration-200 cursor-pointer group
+      "
+    >
       <div className="font-display text-3xl text-[#c8a96e] opacity-30 mb-2 leading-none">
         {String(projeto.numero).padStart(2, '0')}
       </div>

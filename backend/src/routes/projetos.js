@@ -19,15 +19,31 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params
-    const result = await pool.query(
+
+    // busca o projeto
+    const projeto = await pool.query(
       'SELECT * FROM projetos WHERE id = $1',
-      [id]                          // ← $1 previne SQL Injection
+      [id]
     )
-    if (result.rows.length === 0) {
+
+    if (projeto.rows.length === 0) {
       return res.status(404).json({ error: 'Projeto não encontrado' })
     }
-    res.json(result.rows[0])
+
+    // busca as imagens do projeto
+    const imagens = await pool.query(
+      'SELECT * FROM projeto_imagens WHERE projeto_id = $1 ORDER BY ordem ASC',
+      [id]
+    )
+
+    // junta tudo em um objeto só
+    res.json({
+      ...projeto.rows[0],
+      imagens: imagens.rows,
+    })
+
   } catch (err) {
+    console.error(err)
     res.status(500).json({ error: 'Erro ao buscar projeto' })
   }
 })

@@ -5,7 +5,7 @@ import Center from '../Center'
 const edges = [
   { dir: 'top',    label: 'Meus Projetos', arrow: '↓' },
   { dir: 'left',   label: 'Jornada',       arrow: '→' },
-  { dir: 'right',  label: 'Redes Sociais', arrow: '←' },
+  { dir: 'right',  label: 'Contato', arrow: '←' },
   { dir: 'bottom', label: 'Sobre Mim',     arrow: '↑' },
 ]
 

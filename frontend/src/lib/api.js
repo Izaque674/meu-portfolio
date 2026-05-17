@@ -11,4 +11,5 @@ export const api = {
   jornada:  () => get('/jornada'),
   sobre:    () => get('/sobre'),
   redes:    () => get('/redes'),
+  projetoDetalhe: (id) => get(`/projetos/${id}`),
 }

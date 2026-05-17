@@ -8,6 +8,7 @@ export default function EdgeHandle({ dir, label, arrow, onClick, mounted, delay 
 
   const isVertical = dir === 'left' || dir === 'right'
 
+
   // posição inicial fora da tela por direção
   const initialTransform = {
     top:    'translateY(-100%)',

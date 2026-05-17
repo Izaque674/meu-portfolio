@@ -28,15 +28,7 @@ export default function Center() {
         {sobre?.subtitulo}
       </p>
 
-      <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
-        {['Projetos', 'Jornada', 'Sobre', 'Contato'].map(label => (
-          <span key={label} className="flex items-center gap-1 text-[#6b6560] uppercase tracking-widest"
-                style={{ fontSize: 'clamp(7px, 1.8vw, 12px)' }}>
-            <span className="w-1 h-1 rounded-full bg-[#c8a96e] opacity-60 shrink-0" />
-            {label}
-          </span>
-        ))}
-      </div>
+
     </div>
   )
 }
