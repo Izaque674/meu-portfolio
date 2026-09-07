@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import PanelOverlay from '../layout/PanelOverlay'
+import PanelOverlay from '../layout/panelOverlay'
 import ProjectCard  from '../ui/ProjectCard'
 import ProjetoModal from '../ui/ProjetoModal'
 import { useProjetos } from '../../hooks/useProjetos'

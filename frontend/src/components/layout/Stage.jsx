@@ -17,7 +17,7 @@ export default function Stage({ onOpenPanel }) {
     return () => clearTimeout(t)
   }, [])
 
-  // colunas laterais: 7vw no mobile, máximo 64px no desktop
+  
   const sideSize = 'clamp(28px, 7vw, 64px)'
   const topSize  = 'clamp(40px, 6vh, 64px)'
 

@@ -12,13 +12,12 @@ export default function ProjetoModal({ id, onClose }) {
   return (
     <div
       className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-4"
-      onClick={onClose} // clica fora fecha
+      onClick={onClose}
     >
       <div
         className="bg-[#141414] border border-[#2a2a2a] w-full max-w-3xl max-h-[90vh] overflow-y-auto relative"
-        onClick={e => e.stopPropagation()} // impede fechar ao clicar dentro
+        onClick={e => e.stopPropagation()}
       >
-        {/* botão fechar */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 w-9 h-9 z-10
@@ -33,16 +32,18 @@ export default function ProjetoModal({ id, onClose }) {
           <p className="text-[#6b6560] p-8">Carregando...</p>
         ) : (
           <>
-            {/* carrossel de imagens */}
             {imagens.length > 0 && (
-              <div className="relative w-full aspect-video bg-[#0c0c0c]">
+              <div
+                className="relative w-full bg-[#0c0c0c] flex items-center justify-center"
+                style={{ height: 'clamp(200px, 50vw, 480px)' }}
+              >
                 <img
                   src={imagens[imagemAtual]?.url}
                   alt={imagens[imagemAtual]?.alt}
-                  className="w-full h-full object-cover"
+                  className="max-w-full max-h-full object-contain"
+                  style={{ maxHeight: 'clamp(200px, 50vw, 480px)' }}
                 />
 
-                {/* botões do carrossel */}
                 {temAnterior && (
                   <button
                     onClick={() => setImagemAtual(i => i - 1)}
@@ -66,7 +67,6 @@ export default function ProjetoModal({ id, onClose }) {
                   </button>
                 )}
 
-                {/* indicador de posição */}
                 <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
                   {imagens.map((_, i) => (
                     <button
@@ -81,15 +81,16 @@ export default function ProjetoModal({ id, onClose }) {
               </div>
             )}
 
-            {/* informações do projeto */}
             <div className="p-6 md:p-8">
               <div className="flex items-start justify-between gap-4 mb-4">
                 <div>
                   <p className="text-[#c8a96e] text-xs tracking-[.2em] uppercase mb-1">
                     {projeto?.tag}
                   </p>
-                  <h2 className="font-display text-white leading-none"
-                      style={{ fontSize: 'clamp(1.8rem, 5vw, 3rem)' }}>
+                  <h2
+                    className="font-display text-white leading-none"
+                    style={{ fontSize: 'clamp(1.8rem, 5vw, 3rem)' }}
+                  >
                     {projeto?.titulo}
                   </h2>
                 </div>
