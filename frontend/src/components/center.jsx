@@ -24,11 +24,11 @@ export default function Center() {
       </h1>
 
       {/* linha decorativa */}
-      <div className="flex items-center justify-center gap-3 mb-4 md:mb-6 w-full">
-        <div style={{ height: '1px', background: '#c8a96e', opacity: 0.4, width: '60px' }} />
-        <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: '#c8a96e', opacity: 0.6 }} />
-        <div style={{ height: '1px', background: '#c8a96e', opacity: 0.4, width: '60px' }} />
-      </div>
+    <div className="flex items-center justify-center gap-3 mb-4 md:mb-6 w-full">
+    <div className="flex-1 max-w-16 border-t border-[#c8a96e] opacity-40" />
+    <div className="w-1 h-1 rounded-full bg-[#c8a96e] opacity-60" />
+    <div className="flex-1 max-w-16 border-t border-[#c8a96e] opacity-40" />
+    </div>
 
       <p className="font-serif italic text-[#9a9490] w-full leading-snug mb-4 md:mb-8"
          style={{ fontSize: 'clamp(14px, 3.5vw, 18px)' }}>
