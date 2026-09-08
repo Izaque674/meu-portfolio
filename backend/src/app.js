@@ -5,7 +5,13 @@ require('dotenv').config()
 const app = express()
 
 // Middlewares
-app.use(cors({ origin: 'http://localhost:5173' })) // porta padrão do Vite
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'meu-portfolio-production-3ec2.up.railway.app',
+    /\.vercel\.app$/  // aceita qualquer subdomínio do Vercel
+  ]
+}))
 app.use(express.json())
 
 // Rotas
