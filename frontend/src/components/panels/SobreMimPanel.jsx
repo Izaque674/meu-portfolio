@@ -1,5 +1,5 @@
 import PanelOverlay from '../layout/PanelOverlay'
-import SkillsList from '../ui/SkillsList'
+import SkillsList from '../ui/skillsList'
 import { useSobreMim } from '../../hooks/useSobreMim'
 
 export default function SobreMimPanel({ onClose }) {

@@ -1,5 +1,5 @@
 import PanelOverlay from '../layout/PanelOverlay'
-import TimelineItem from '../ui/timelineItem'
+import TimelineItem from '../ui/timeLineItem'
 import { useJornada } from '../../hooks/useJornadas'
 
 export default function JornadaPanel({ onClose }) {
