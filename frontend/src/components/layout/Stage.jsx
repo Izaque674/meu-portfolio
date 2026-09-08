@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import EdgeHandle from './EdgeHandle'
-import Center from '../Center'
+import Center from '../center'
 
 const edges = [
   { dir: 'top',    label: 'Meus Projetos', arrow: '↓' },

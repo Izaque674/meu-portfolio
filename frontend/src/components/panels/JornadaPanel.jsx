@@ -1,4 +1,4 @@
-import PanelOverlay from '../layout/panelOverlay'
+import PanelOverlay from '../layout/PanelOverlay'
 import TimelineItem from '../ui/timelineItem'
 import { useJornada } from '../../hooks/useJornadas'
 
