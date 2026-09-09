@@ -9,7 +9,7 @@ export default function ProjectCard({ projeto, onClick }) {
       "
     >
       <div className="font-display text-3xl text-[#c8a96e] opacity-30 mb-2 leading-none">
-        {String(projeto.numero).padStart(2, '0')}
+        {String(projeto.ordem ?? 0).padStart(2, '0')}
       </div>
       <h3 className="font-medium text-white text-sm tracking-wide mb-2">
         {projeto.titulo}
